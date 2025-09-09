@@ -1,8 +1,15 @@
+/*
+    Banking Application based on Command Line Interface(CLI)
+    * It showcases the basic functionality of the Bank System such as deposit, withdrawal and able to see the transaction history.
+    * It enables beginners to build projects in java.
+    * It helps to learn and understand OOPs (Encapsulation, Inheritance, Abstraction, Polymorphism)
+*/
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+// interface helps to attains pure abstraction
 interface BankMethods {
 
     double getBalance();
@@ -12,6 +19,7 @@ interface BankMethods {
     void withDraw(double WithdrawAmount);
 }
 
+// Class BankAccount - to store the name and account number of the customer and null exceptions
 class BankAccount {
     private String accountNo;
     private String name;
@@ -19,6 +27,9 @@ class BankAccount {
     public BankAccount(String accountNo, String name) {
         this.accountNo = accountNo;
         this.name = name;
+        if (accountNo == null || name == null) {
+            throw new IllegalArgumentException("Account number or customer's name should not be null");
+        }
     }
 
     public String getAccountNo() {
@@ -26,6 +37,9 @@ class BankAccount {
     }
 
     public void setAccountNo(String accountNo) {
+        if (accountNo == null) {
+            throw new IllegalArgumentException("Account number must not be null");
+        }
         this.accountNo = accountNo;
     }
 
@@ -34,6 +48,9 @@ class BankAccount {
     }
 
     public void setName(String name) {
+        if (name == null) {
+            throw new IllegalArgumentException("Name must not be null");
+        }
         this.name = name;
     }
 
@@ -113,7 +130,7 @@ class BankService {
     }
 
     public void logTransaction(String type, double amount) {
-        // format() method - used to format the string with mu
+        // format() method - used to format the string with time and amount details
         String entry = String.format("[%s] %s ₹%,.2f", LocalDateTime.now(), type, amount);
         transactionHistory.add(entry);
     }
@@ -200,5 +217,6 @@ public class BankingApplication {
             }
         }
     }
+
 
 }
