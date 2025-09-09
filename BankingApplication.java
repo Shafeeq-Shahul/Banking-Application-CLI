@@ -25,11 +25,12 @@ class BankAccount {
     private String name;
 
     public BankAccount(String accountNo, String name) {
+        if (accountNo == null || accountNo.trim().isEmpty() ||
+                name == null || name.trim().isEmpty()) {
+            throw new IllegalArgumentException("Account number and name must not be empty or null");
+        }
         this.accountNo = accountNo;
         this.name = name;
-        if (accountNo == null || name == null) {
-            throw new IllegalArgumentException("Account number or customer's name should not be null");
-        }
     }
 
     public String getAccountNo() {
@@ -37,8 +38,8 @@ class BankAccount {
     }
 
     public void setAccountNo(String accountNo) {
-        if (accountNo == null) {
-            throw new IllegalArgumentException("Account number must not be null");
+        if (accountNo == null || accountNo.trim().isEmpty()) {
+            throw new IllegalArgumentException("Account number cannot be zero");
         }
         this.accountNo = accountNo;
     }
@@ -48,8 +49,8 @@ class BankAccount {
     }
 
     public void setName(String name) {
-        if (name == null) {
-            throw new IllegalArgumentException("Name must not be null");
+        if (name == null || name.trim().isEmpty()) {
+            throw new IllegalArgumentException("Customer's name should not be null");
         }
         this.name = name;
     }
@@ -220,3 +221,4 @@ public class BankingApplication {
 
 
 }
+
