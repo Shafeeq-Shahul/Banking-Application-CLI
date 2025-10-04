@@ -19,4 +19,4 @@
 <img width="800" height="600" alt="DI" src="https://github.com/user-attachments/assets/076de9b5-ccd2-4ba8-88b4-072161ad2b9f" />
 
 * It is suitable project for beginner level programmers in Java and helps to learn about in depth Java concepts.
-* It also takes you next to you dev journey.
+* It also takes you to the next level in dev journey.
