@@ -12,9 +12,9 @@
 
 ## What will you be Learning ?
 
-Learn in-depth concepts about Object Oriented Programming(OOPs) like interface and encapsulation.
-Learn about Dependency Injection Design Pattern.
-Which Means injection of required Dependencies(like Class methods and attributes) to another class. Like Injecting BankAccount and BankMethodImp class dependencies in the BankService class.
+* Learn in-depth concepts about Object Oriented Programming(OOPs) like interface and encapsulation.
+* Learn about Dependency Injection Design Pattern.
+* Which Means injection of required Dependencies(like Class methods and attributes) to another class. Like Injecting BankAccount and BankMethodImp class dependencies in the BankService class.
 
 <img width="800" height="600" alt="DI" src="https://github.com/user-attachments/assets/076de9b5-ccd2-4ba8-88b4-072161ad2b9f" />
 
